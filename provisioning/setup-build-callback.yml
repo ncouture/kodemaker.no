@@ -1,0 +1,63 @@
+---
+- hosts: new-servers
+  tasks:
+   - name: Install jdk7
+     yum: name=java-1.7.0-openjdk-devel state=present
+
+   - name: Install git
+     yum: name=git state=present
+
+   - name: install the 'Development tools' package group
+     yum: name="@Development tools" state=present
+
+   - name: install thttpd rpm
+     yum: name=ftp://mirror.switch.ch/pool/2/mirror/fedora/linux/releases/15/Everything/source/SRPMS/thttpd-2.25b-24.fc15.src.rpm state=present
+
+   - name: install thttpd
+     yum: name=thttpd state=present
+
+   - name: Configure thttpd
+     template: src=templates/thttpd.conf.j2 dest=/etc/thttpd.conf mode=0640 owner=thttpd
+     notify: restart thttpd
+
+   - name: Let thttpd own its home folder
+     file: state=directory path=/var/www/thttpd owner=thttpd
+
+   - name: Create bin folder for thttpd
+     file: state=directory path=/var/www/thttpd/bin owner=thttpd
+
+   - name: install lein for thttpd user
+     get_url: dest=/var/www/thttpd/bin/lein url="https://raw.github.com/technomancy/leiningen/stable/bin/lein"
+ 
+   - name: make lein executable
+     file: path=/var/www/thttpd/bin/lein mode=755
+
+   - name: upload build-site script
+     template: src=templates/build-site.cgi.j2 dest=/var/www/thttpd/cgi-bin/build-site.cgi mode=755 owner=thttpd
+
+   - name: Install known_hosts file for ansible
+     copy: src=files/known_hosts dest=/home/{{ansible_ssh_user}}/.ssh/known_hosts owner={{ansible_ssh_user}} group={{ansible_ssh_user}} mode=0600
+
+   - name: Create the SSH directory for thttpd.
+     file: state=directory path=/var/www/thttpd/.ssh/ owner=thttpd mode=0700
+ 
+   - name: Upload SSH known hosts.
+     copy: src=files/known_hosts dest=/var/www/thttpd/.ssh/known_hosts owner=thttpd mode=0600
+
+   - name: Upload keys for ansible.
+     copy: src=files/{{item}} dest=/home/{{ansible_ssh_user}}/.ssh/{{item}} owner={{ansible_ssh_user}} group={{ansible_ssh_user}} mode=0600
+     with_items:
+      - id_rsa
+      - id_rsa.pub
+     
+   - name: Clone git repo
+     git: repo=git@github.com:kodemaker/kodemaker.no.git dest=/home/{{ansible_ssh_user}}/kodemaker.no update=no
+     sudo: no
+
+   - name: Link repo
+     file: src=/home/{{ansible_ssh_user}}/kodemaker.no dest=/var/www/thttpd/kodemaker.no owner=thttpd state=link
+
+  handlers:
+   - name: restart thttpd
+     service: name=thttpd state=restarted enabled=yes
+
