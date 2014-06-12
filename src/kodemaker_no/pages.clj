@@ -12,7 +12,7 @@
 
 (defn general-pages [content]
   {"/" (partial index-page (vals (:people content)))
-   "/skjema/" form-page
+   "/skjema/" (partial form-page (:articles content))
    "/blogg/" (partial blog-page (vals (:blog-posts content)))
    "/kurs/" (partial course-page (:videos content))})
 
