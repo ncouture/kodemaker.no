@@ -19,15 +19,15 @@ RASK (RApportSystem for Kjøring) er NSBs nye løsning for rapportering og analy
 
 --------------------------------------------------------------------------------
 :type reference-meta
-:title NSB Personalbillett
+:title NSB RASK
 :body
 
 En ny internapplikasjon for personalbilletter ble bygget opp av to Kodemakere
 i team. Utviklingen foregikk hos NSB over en 8 måneders periode.
 
 :team-size 6
-:factoid-1 6 Kodemakere
-:factoid-2 1200 timer / 08.2013-03.2014
+:factoid-1 5 Kodemakere
+:factoid-2 6500+ timer / 01.2012-
 
 --------------------------------------------------------------------------------
 :type illustrated-column
@@ -42,9 +42,8 @@ som Nettbuss, Jernbaneverket, Flytoget, og ROM Eiendom.
 :title Godt kjente teknologier
 :body
 
-Applikasjonen ble utviklet på nytt fra grunnen av. Backend var Java og [Groovy](/groovy/) kjørende på
-[Tomcat](/tomcat/), med [Spring](/spring/), [Hibernate](/hibernate/),
-Liquibase og [Oracle](/oracle/).
+Applikasjonen ble utviklet på nytt fra grunnen av. Backend var Grails kjørende på
+[Tomcat](/tomcat/), med [Spring](/spring/), Liquibase og Oracle DB. 
 
 Frontenden ble laget ved hjelp av
 Grails, [JavaScript](/javascript/) og [Twitter Bootstrap](/bootstrap/).
@@ -56,13 +55,11 @@ Grails, [JavaScript](/javascript/) og [Twitter Bootstrap](/bootstrap/).
 :content
 
 /tomcat/                           /photos/tech/tomcat.svg
-/git/                              /photos/tech/git.svg
 /javascript/                       /photos/tech/js.svg
 /spring/                           /photos/tech/spring.png 2x
 /java/                             /photos/tech/java.svg
 /groovy/                           /photos/tech/groovy.png 2x
 /bootstrap/                        /photos/tech/bootstrap.svg
-/hibernate/                        /photos/tech/hibernate.svg
 
 --------------------------------------------------------------------------------
 :type illustrated-column
@@ -88,19 +85,11 @@ incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostr
 exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
 irure dolor in reprehenderit ...
 
-sten-morten
+stein-tore
 
-Sten Morten hoppet Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
-irure dolor in reprehenderit ...
-
-kristian
-
-Krsitian pumpet Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
-irure dolor in reprehenderit ...
+Stein Tore har jobbet i prosjektet siden august 2013, han har jobbet med alle deler av systemet,
+fra databasedesign til brukergrensesnitt. Han hadde en sentral rolle i innlesing og behandling av
+automatiske passasjertellinger og i å lage grunnlaget for applikasjonen Trafikk.
 
 stian
 
@@ -109,24 +98,32 @@ sentral rolle i å utvikle kjøremotoren for å innhenting, prosessering og samm
 fra en rekke ulike kilder i korrekt rekkefølge. Dette var viktig for å oppnå et godt og robust 
 sluttresultat hvor man automatisk kan håndtere og rapportere ulike feilsituasjoner.
 
-stein-tore
-
-Stein Tore pendlet Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
-irure dolor in reprehenderit ...
-
 stig
 
-Stig orienterte Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
+Stig orienterte Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
 irure dolor in reprehenderit ...
 
 ronny
 
 Ronny jobbet med applikasjonen Min energi. Det er en applikasjon som viser strømforbruk for turerene en lokfører har kjørt.
 Fokus var på å lage en enkel, brukervennlig løsning, gjennom tett samarbeid med designer, produkteier og pilotbrukere.
+
+kristian
+
+Kristian pumpet Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+irure dolor in reprehenderit ...
+
+sten-morten
+
+Sten Morten hoppet Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+irure dolor in reprehenderit ...
+
 
 --------------------------------------------------------------------------------
 :type illustrated-column
