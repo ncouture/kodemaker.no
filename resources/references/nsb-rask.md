@@ -123,6 +123,11 @@ incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostr
 exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
 irure dolor in reprehenderit ...
 
+ronny
+
+Ronny jobbet med applikasjonen Min energi. Det er en applikasjon som viser strømforbruk for turerene en lokfører har kjørt.
+Fokus var på å lage en enkel, brukervennlig løsning, gjennom tett samarbeid med designer, produkteier og pilotbrukere.
+
 --------------------------------------------------------------------------------
 :type illustrated-column
 :title Minimalistisk og pragmatisk prosess
