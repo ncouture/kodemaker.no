@@ -42,12 +42,12 @@ som Nettbuss, Jernbaneverket, Flytoget, og ROM Eiendom.
 :title Godt kjente teknologier
 :body
 
-Applikasjonen ble utviklet på nytt fra grunnen av. Backend var Java kjørende på
-Jetty og [Tomcat](/tomcat/), med [Spring](/spring/), [Hibernate](/hibernate/),
-Liquibase og [MS SQL Server](/mssql/). 
+Applikasjonen ble utviklet på nytt fra grunnen av. Backend var Java og [Groovy](/groovy/) kjørende på
+[Tomcat](/tomcat/), med [Spring](/spring/), [Hibernate](/hibernate/),
+Liquibase og [Oracle](/oracle/).
 
 Frontenden ble laget ved hjelp av
-[Wicket](/wicket/), [JavaScript](/javascript/) og [Twitter Bootstrap](/bootstrap/).
+Grails, [JavaScript](/javascript/) og [Twitter Bootstrap](/bootstrap/).
 
 [Groovy](/groovy/), Grails, Java, SQL/Oracle, Linux, JMS/ActiveMQ, HTML5, JSON, JavaScript, CSS, Spock, WebServices, REST, HighCharts
 
@@ -57,14 +57,12 @@ Frontenden ble laget ved hjelp av
 
 /tomcat/                           /photos/tech/tomcat.svg
 /git/                              /photos/tech/git.svg
-/maven/                            /photos/tech/maven.svg 2x
-/wicket/                           /photos/tech/wicket.svg
 /javascript/                       /photos/tech/js.svg
 /spring/                           /photos/tech/spring.png 2x
 /java/                             /photos/tech/java.svg
+/groovy/                           /photos/tech/groovy.png 2x
 /bootstrap/                        /photos/tech/bootstrap.svg
 /hibernate/                        /photos/tech/hibernate.svg
-/mssql/                            /photos/tech/mssql.png
 
 --------------------------------------------------------------------------------
 :type illustrated-column
