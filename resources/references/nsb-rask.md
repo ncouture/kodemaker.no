@@ -104,10 +104,10 @@ irure dolor in reprehenderit ...
 
 stian
 
-Stian styret Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
-irure dolor in reprehenderit ...
+Stian jobbet med alle lag av applikasjonen fra databasedesign til brukergrensesnitt. Han hadde en 
+sentral rolle i å utvikle kjøremotoren for å innhenting, prosessering og sammenstilling av data
+fra en rekke ulike kilder i korrekt rekkefølge. Dette var viktig for å oppnå et godt og robust 
+sluttresultat hvor man automatisk kan håndtere og rapportere ulike feilsituasjoner.
 
 stein-tore
 
