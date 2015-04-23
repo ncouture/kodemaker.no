@@ -35,17 +35,11 @@ Avansert webapplikasjon utviklet av Kodemaker i tett samarbeid med Dacon, Affect
 :type illustrated-column
 :body
 
+Sikkerhet og forutsigbarhet er viktige faktorer for Forsvaret. Det er av stor betydning å følge opp “innsiden” av våpenrør/piper til hånd- og avdelingsvåpen, slik at disse håndteres på en forsvarlig måte i henhold til vedlikehold og kassering. Detaljert oversikt over et våpens tilstand gjør det enklere å planlegge innkjøp, bruk og vedlikehold av disse.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
-irure dolor in reprehenderit ...
+Forsvaret har anskaffet et avansert, høyoppløselig måle- og inspeksjonsverktøy som gjennomfører målinger på innsiden av ulike våpenrør/piper. Data fra disse målingene må gjøres tilgjengelig for videre håndtering i henhold til valgte prosedyrer.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
-irure dolor in reprehenderit ...
-
+Kodemakers delprosjekt var en del av et større totalprosjekt hvor Affecto utviklet løsning for datavarehus og Dacon leverte måleutstyret.
 --------------------------------------------------------------------------------
 :type illustrated-column
 :title Teknologivalg
@@ -94,7 +88,7 @@ som er NSBs sentrale billettsystem.
 
 alf-einar
 
-Alf teknisk prosjektleder, utvikler ...
+teknisk prosjektleder, utvikler ...
 
 stian
 
@@ -115,9 +109,11 @@ Fluffer ...
 :title Minimalistisk og pragmatisk prosess
 :body
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
-irure dolor in reprehenderit ...
+Kodemaker har utviklet GBMS slik at Forsvaret kan samle og sammenstille bilder, video og ulike måledata! på en hensiktsmessig måte for å oppdage avvik og utviklingstrender i lys av bruksmønster for ulike våpen.
+
+Applikasjonprosjektet er utført av Kodemaker med et team bestående av totalt fire utviklere. Teamet håndterte alt fra planlegging, interaksjons-, database- og systemdesign, integrasjoner mot SAP, installasjon og drift i testmiljø samt nødvendig brukeropplæring og dokumentasjon.
+
+Kodemakers løsning er utviklet i tett samarbeid med Forsvaret gjennom regelmessige sprinter der funksjonalitet er utviklet, testet og evaluert. Forsvarets våpeneksperter har fått rask tilgang til å benytte funksjoner i deres eget miljø – slik at videre arbeid har fått nødvendige verifikasjoner og korreksjoner inn mot kommende delleveranse.
+
 
 --------------------------------------------------------------------------------
