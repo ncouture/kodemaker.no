@@ -123,10 +123,8 @@ irure dolor in reprehenderit ...
 
 yen
 
-Yen skrev Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-irure dolor in reprehenderit ...
+Yen er den som startet prosjektet og ansvarlig for datamodellen og arkitekturen bak. Hun har bygget opp en solid forretningsforståelse for NSB togtrafikk og integrert forskjellige kilder inn til en felles rapporteringsplattform. Yen har i tillegg rolle som scrum master og har kontroll over datakvalitet og datatransformasjon på alle lag.  
+
 
 
 --------------------------------------------------------------------------------
