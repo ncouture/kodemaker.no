@@ -27,7 +27,7 @@
                                 med venner. Og noen ganger spiller jeg til og med selv!"
                   :illustration "/illustrations/hobbies/fotball.jpg"}
                  {:title        "Smarthuset som sparer penger og gjør kule ting!"
-                  :description  "Er for tiden veldig opptatt av å automatisere huset, uten at det koster skjorta.
+                  :description  "Er for tiden veldig opptatt av å automatisere ting som skjer i huset, uten at det koster skjorta.
                                  Planen er automatisk oppvarming, melding dersom garasjeporten er åpen og
                                  demping av lyset når det trengs. Det hele starter med en Raspberry PI"
                   :illustration "/illustrations/hobbies/raspberrypi.jpg"}]
@@ -42,7 +42,7 @@
                     :link {:url "https://vimeo.com/105857867"
                         :text "Se video"}
                     :tech [:clojure]
-                    :blurb "Et veldig bra foredrag fra JavaZone 2014. Dette fikk meg til å virkelig lære Clojure.
+                    :blurb "Et veldig bra foredrag fra JavaZone 2014. Dette fikk meg til å virkelig ønske å lære Clojure.
                             Anbefales!" }]        
 
  :blog-posts [{:url "http://steintore.github.io/openhab/smart%20house/2014/03/01/openhab-heats-my-living-room-when-i-need-it.html"
