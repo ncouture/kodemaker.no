@@ -110,7 +110,7 @@ Sten Morten jobbet med blant annet de første integrasjonene, energidata, kjøre
 stian
 
 Stian jobbet med alle lag av applikasjonen fra databasedesign til brukergrensesnitt. Han hadde en 
-sentral rolle i å utvikle kjøremotoren for å innhenting, prosessering og sammenstilling av data
+sentral rolle i å utvikle kjøremotoren for innhenting, prosessering og sammenstilling av data
 fra en rekke ulike kilder i korrekt rekkefølge. Dette var viktig for å oppnå et godt og robust 
 sluttresultat hvor man automatisk kan håndtere og rapportere ulike feilsituasjoner.
 
