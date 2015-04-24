@@ -40,13 +40,13 @@ og analyse av det som daglig skjer ute i togtrafikken
 
 RASK er et datavarehus som sammenstiller data fra mange forskjellige kilder, systemet
 har foreløpig to applikasjoner som eksponerer data til brukerne. De to applikasjonene er
-Trafikk og MinEnergi.
+Trafikk og Min energi.
 
 Trafikk er et rapporteringsverktøy som er laget for å rapportere data om blant annet
 togtrafikk, materiellforbruk, avvik og energiforbruk.
 Alle ansatte i NSB har tilgang til applikasjonen, og den er i bruk i rapporteringsformål fra og med 01.01.2015
 
-MinEnergi er en applikasjon for lokførerne i NSB. Her kan brukerne se sine egne togframføringer og få oversikt over energiforbruk på turene.
+Min energi er en applikasjon for lokførerne i NSB. Her kan brukerne se sine egne togframføringer og få oversikt over energiforbruk på turene.
 Turene sammenlignes med et gjennomsnittstall slik at man kan få ett innblikk i forbruket og sammenligne med tidligere turer på samme strekning.
 
 --------------------------------------------------------------------------------
