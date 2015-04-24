@@ -43,7 +43,7 @@ har foreløpig to applikasjoner som eksponerer data til brukerne. De to applikas
 Trafikk og Min energi.
 
 Trafikk er et rapporteringsverktøy som er laget for å rapportere data om blant annet
-togtrafikk, materiellforbruk, avvik og energiforbruk.
+togtrafikk, materiellbruk, avvik og energiforbruk.
 Alle ansatte i NSB har tilgang til applikasjonen, og den er i bruk i rapporteringsformål fra og med 01.01.2015
 
 Min energi er en applikasjon for lokførerne i NSB. Her kan brukerne se sine egne togframføringer og få oversikt over energiforbruk på turene.
