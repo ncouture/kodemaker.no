@@ -1,6 +1,6 @@
 (ns kodemaker-no.validate
-  (:require [schema.core :refer [optional-key validate either Str Keyword Num Any pred both]]
-            [clj-time.format :refer [parse formatters]]))
+  (:require [clj-time.format :refer [parse formatters]]
+            [schema.core :refer [optional-key validate either Str Keyword Num Any pred both]]))
 
 (def Path (pred (fn [^String s] (re-find #"^(/[a-zA-Z0-9_\-.]+)+/?$" s)) 'simple-slash-prefixed-path))
 (def URL (pred (fn [^String s] (re-find #"^(?i)\b(https?(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'\".,<>?«»“”‘’]))$" s)) 'url))
@@ -92,7 +92,19 @@
    (optional-key :endorsements) [{:author Str ;; anbefalinger, gjerne fra linkedin
                                   :quote Str
                                   (optional-key :title) Str ;; tittel, firma
-                                  (optional-key :photo) Path}]})
+                                  (optional-key :photo) Path}]
+
+   (optional-key :business-presentations) [{:title Str ;; foredrag du selger til kunder
+                                            :blurb Str
+                                            :tech [ID]
+                                            :duration Str
+                                            :price Str}]
+
+   (optional-key :workshops) [{:title Str ;; workshop eller kurs til salgs
+                               :blurb Str
+                               :tech [ID]
+                               :duration Str
+                               :price Str}]})
 
 (def Tech
   {:id ID

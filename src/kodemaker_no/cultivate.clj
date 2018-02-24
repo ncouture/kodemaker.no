@@ -2,6 +2,7 @@
   (:require [kodemaker-no.cultivate.blog-posts :refer [cultivate-blog-posts]]
             [kodemaker-no.cultivate.people :refer [cultivate-people]]
             [kodemaker-no.cultivate.screencasts :refer [cultivate-screencasts]]
+            [kodemaker-no.cultivate.sellable :refer [cultivate-sellable]]
             [kodemaker-no.cultivate.tech :refer [cultivate-techs]]
             [kodemaker-no.cultivate.videos :refer [cultivate-videos]]))
 
@@ -12,4 +13,6 @@
       :tech (cultivate-techs raw-content)
       :blog-posts (cultivate-blog-posts (:blog-posts raw-content) people)
       :videos (cultivate-videos raw-content)
-      :screencasts (cultivate-screencasts raw-content))))
+      :screencasts (cultivate-screencasts raw-content)
+      :business-presentations (cultivate-sellable :business-presentations raw-content)
+      :workshops (cultivate-sellable :workshops raw-content))))
