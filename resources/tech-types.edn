@@ -185,9 +185,9 @@
  :kanban :methodology
  :karma :library
  :kibana :server
- :krypto :methodology
- :kubernetes :devops
  :koha :library
+ :kubernetes :devops
+ :krypto :methodology
  :leiningen :devtools
  :less :frontend
  :liberator :library
