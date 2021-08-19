@@ -1636,3 +1636,44 @@ a, .clickable {
 @page :first {
   margin-top: 0;
 }
+
+.erfaring,
+.ansvarlig,
+.utfordrer,
+.bidrar,
+.engasjert,
+.uformell,
+.orden {transition: opacity 500ms; opacity: 0;}
+
+.erfaring-on .erfaring,
+.ansvarlig-on .ansvarlig,
+.utfordrer-on .utfordrer,
+.bidrar-on .bidrar,
+.engasjert-on .engasjert,
+.uformell-on .uformell,
+.orden-on .orden {opacity: 1;}
+
+.no-erfaring,
+.no-ansvarlig,
+.no-utfordrer,
+.no-bidrar,
+.no-engasjert,
+.no-uformell,
+.no-orden {transition: opacity 500ms;}
+
+.erfaring-on .no-erfaring,
+.ansvarlig-on .no-ansvarlig,
+.utfordrer-on .no-utfordrer,
+.bidrar-on .no-bidrar,
+.engasjert-on .no-engasjert,
+.uformell-on .no-uformell,
+.orden-on .no-orden {opacity: 0;}
+
+#illustration {
+  margin: 220px 0 0;
+}
+
+@media only screen and (max-width: 690px) {
+  #illustration { margin: 220px -100px 0 -100px; }
+  #illustration .nomob {display:none;}
+}
