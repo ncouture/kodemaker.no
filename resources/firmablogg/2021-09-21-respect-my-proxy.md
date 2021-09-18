@@ -1,7 +1,7 @@
 :title Respect my https_proxy!
 :author nils
 :tech [:bash]
-:published 2021-09-21
+:published 2021-09-22
 
 :blurb
 
