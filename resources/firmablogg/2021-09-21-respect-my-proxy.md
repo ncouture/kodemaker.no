@@ -44,7 +44,7 @@ $ netstat -an|grep SYN
 tcp4 0 0 10.0.16.193.61011 17.110.232.68.443 SYN_SENT
 ```
 
-Hah. Så der er det noe. Etter litt etterforskning så finner jeg at foreign-address, `17.110.232.68` er en ip-addresse som Apple eier. Jeg har funnet synderen. Nå må jeg finne den eksakte
+Hah. Så der er det noe, en prosess som har sendt en SYN request og ikke får svar.  Etter litt etterforskning så finner jeg at foreign-address, `17.110.232.68` er en ip-addresse som Apple eier. Jeg har funnet synderen. Nå må jeg finne den eksakte prosessen som henger. 
 
 Local address er `10.0.16.193.61011`, bestående av ip og port. For å finne hvilken prosess som bruker port `61011` bruker jeg `lsof` og får meg en pen overraskelse:
 
@@ -58,7 +58,7 @@ COMMAND ....
 Hah. Så Xcodebuild bruker altså en bundlet versjon av __java__ for å laste opp appen min til appstore og programmet følger ikke konvensjonene for å respektere `https_proxy`!!! (Av alle versjoner av jdk har Apple valgt jdk 14.0.2 pr. i dag)
 
 ## Løsningen
-Så skal jeg modifisere jarfila til å respektere `https_proxy`? Nææ, det høres litt slitsomt ut, dessuten har jeg ikke kildekoden til xode-bibliotekene. Men siden macOS er unix har jeg en liten hack som kan funke likevel. 
+Så skal jeg modifisere jarfila til å respektere `https_proxy`? Nææ, det høres litt slitsomt ut, dessuten har jeg ikke kildekoden til xcode-bibliotekene. Men siden macOS er unix har jeg en liten hack som kan funke likevel. 
 
 `java` er en executable fil så renamer jeg filen til `java.real` og lager en erstatnings-fil, en tekstfil jeg kaller `java`,  som er et bash-script med en liten `chmod a+x`: 
 
