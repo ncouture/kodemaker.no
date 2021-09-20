@@ -13,7 +13,7 @@ Noen kunder jeg har jobbet for har av ulike grunner en proxy som all internett-t
 
 Enn så irriterende det er så er det som regel bare å finne de riktige innstillingene i IDEA, browser og operativsystem, så er saken biff.
 
-Som utvikler som er avhengig av shellet ditt så setter du miljøvariablene `https_proxy` og `https_proxy`, evt med uppercase også for å være sikker. 
+Som utvikler som er avhengig av shellet ditt så setter du miljøvariablene `http_proxy` og `https_proxy`, evt med uppercase også for å være sikker. 
 Dette er variabler som de aller fleste cli-verktøy respekterer. 
 
 Men hva gjør du når cli-verktøyet ditt simpelthen ikke respekterer noen av disse?
