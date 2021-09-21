@@ -60,7 +60,7 @@ Hah. Så Xcodebuild bruker altså en bundlet versjon av __java__ for å laste op
 ## Løsningen
 Så skal jeg modifisere jarfila til å respektere `https_proxy`? Nææ, det høres litt slitsomt ut, dessuten har jeg ikke kildekoden til xcode-bibliotekene. Men siden macOS er unix har jeg en liten hack som kan funke likevel. 
 
-`java` er en executable fil så renamer jeg filen til `java.real` og lager en erstatnings-fil, en tekstfil jeg kaller `java`,  som er et bash-script med en liten `chmod a+x`: 
+`java` er en executable fil så jeg omdøper filen til `java.real` og lager en erstatnings-fil, en tekstfil jeg kaller `java`, som er et bash-script med en liten `chmod a+x`: 
 
 ```
 !/bin/bash
