@@ -163,20 +163,18 @@ Den resulterende
 ble liten og søt, og grovt sett ble det lagt til ~10 linjer kode i Dumdom for
 denne featuren, hvis vi ser bort fra dokumentasjon, tester, osv.
 
-Hva er poenget med å shippe noe så nedstrippa? Med denne endringen har Dumdom
-skapt muligheter for brukerne sine, uten å gi seg hen til feature creep og
-bloat. Det er fortsatt et nett lite rendering-bibliotek, og dersom du benytter
-deg av muligheten som ligger i denne nye featuren, ja så gjør Dumdom jobben sin
-enda bedre.
+Hvorfor shippe noe så nedstrippa? Med denne endringen har Dumdom skapt
+muligheter for brukerne sine, uten å gi seg hen til scope creep. Det er fortsatt
+et nett lite rendering-bibliotek, og dersom du benytter deg av muligheten som
+ligger i denne nye featuren, ja så gjør Dumdom jobben sin enda bedre.
 
 "Look at all the things I'm not doing" ble det en gang sagt i en legendarisk
 screencast. Den gangen handlet det om implisitte antagelser, mens her handler
-det om å ikke gjøre mer enn akkurat nok for å gi brukerne dine nye muligheter.
-Hvis jeg fortsatt ønsker å levere en "batteries included" løsning for meldinger
-til Dumdom så kan jeg lage en meldingsbuss som et eget bibliotek, og jeg kan
-fylle det med alle idéene over. Ved å komponere de fra utsiden sikrer vi Dumdom
-en stabil fremtid. Alle antagelsene, koden og dokumentasjonen som ble forkastet
-på veien er kode som ikke kan akkumulere nye bugs og sikkerhetshull, ikke skaper
+det om å ikke gjøre mer enn akkurat nok. Hvis jeg fortsatt ønsker å levere en
+"batteries included" løsning for meldinger til Dumdom så kan jeg lage det i et
+eget bibliotek. Ved å komponere disse fra utsiden sikrer vi Dumdom en stabil
+fremtid. Alle antagelsene, koden og dokumentasjonen som ble forkastet på veien
+er kode som ikke kan akkumulere nye bugs og sikkerhetshull, ikke skaper
 forvirring for brukerne, og som ikke åpner døra for å akkumulere enda flere
 nesten-relaterte features.
 
