@@ -1,7 +1,7 @@
 :title Gjør mindre, få til mer
 :author christian
 :tech [:frontend :opensource :clojure]
-:published 2021-11-01
+:published 2021-11-09
 
 :blurb
 
