@@ -1,6 +1,6 @@
 :title Gjør mindre, få til mer
 :author christian
-:tech [:frontend :opensource :clojure]
+:tech [:frontend :design :funksjonell-programmering :clojure]
 :published 2021-11-09
 
 :blurb
