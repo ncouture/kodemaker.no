@@ -12,9 +12,9 @@ nedskalert og samtidig mer nyttig.
 
 Jeg vedlikeholder et rendering-bibliotek
 ([Dumdom](https://github.com/cjohansen/dumdom)), som lar deg rendre DOM med
-komponenter, mye på samme vis som React. Jeg er også over gjennomsnittet opptatt
-av å representere så mye som mulig som rene data. Med virtuell DOM og
-komponenter kan vi ha en data-representasjon av UI-et med noen få unntak:
+komponenter, mye likt React. Jeg er også over gjennomsnittet opptatt av å
+representere så mye som mulig som rene data. Med virtuell DOM og komponenter kan
+vi ha en data-representasjon av UI-et, med noen få unntak:
 
 ```clj
 [:button {:style {:background "#ff0000"}
@@ -30,8 +30,9 @@ de gjør rendering-biblioteket mindre i stand til å ta effektive avgjørelser o
 hva som må oppdateres i DOM-en og ikke.
 
 Vanligvis koder jeg event-handlere til å publisere meldinger på appens
-meldingsbuss. Altså omsetter jeg et generisk "klikk" til mer
-forretningsspesifikke meldinger:
+meldingsbuss (les mer om [enkel og god
+frontendarkitektur](https://www.kodemaker.no/blogg/2020-01-enkel-arkitektur/)).
+Altså omsetter jeg et generisk "klikk" til mer app-spesifikke meldinger:
 
 ```clj
 [:form
@@ -48,8 +49,8 @@ forretningsspesifikke meldinger:
 Her har noen fylt inn e-post-adressen sin, og dersom de nå trykker på knappen,
 så vil appen få tre meldinger, som er implementert som "actions" et sted.
 
-Med eksempelet over i hodet skulle Dumdom nå få en ny feature: innebygget støtte
-for event-handlere som bare var data.
+Med eksempelet over i hodet skulle Dumdom få en ny feature: innebygget støtte
+for event-handlere som bare er data.
 
 ## Iterasjon #1: Dumdoms meldingsbuss
 
@@ -69,7 +70,7 @@ default-implementasjon av denne som en convenience, men at det skulle være muli
 
 Da [Anders](/anders/) så dette sa han umiddelbart: "Den protokollen beskriver
 for mye!" Og han hadde helt rett: Dumdom selv skal bare kalle én av disse
-funksjonene, så hvorfor skal den mene noe om hvordan de andre ser ut?
+funksjonene, `publish`, så hvorfor skal den mene noe om hvordan de andre ser ut?
 
 Første nedskalering var et faktum: protokollen trenger kun å spesifisere
 `publish`. Den innebyggede implementasjonen kan fortsatt tilby `watch` og
@@ -92,7 +93,7 @@ du kan bruke en, men du lager den selv.
 Dersom Dumdom skal publisere event-data må den nødvendigvis ha noen meninger om
 hvordan event-data ser ut. Og for at man virkelig skal kunne klare seg uten
 funksjoner må det være mulig å spesifisere at man ønsker å få med vanlige
-egenskaper fra event-objektet så som target, verdien fra target-elementet osv.
+egenskaper fra event-objektet så som `target`, verdien fra target-elementet osv.
 
 Her er et utkast som lar deg - med rene data - definere en event-handler som får
 verdien av input-feltet:
@@ -114,16 +115,17 @@ levere dette. Det blir en del funksjonalitet å lage, en del ting å dokumentere
 Data på event-handlere må valideres slik at de ikke snubler i treskeverket.
 
 Er vi på vei i feil retning? Det vi ønsker er å gjøre det mulig å uttrykke
-event-handlere med data, ikke å diktere hvordan appen din skal sende meldinger.
+event-handlere med data, ikke å diktere hvordan appen din skal sende og motta
+meldinger.
 
 Den tredje nedskaleringen kommer i form av at `publish` døpes om til
 `handle-event`. Og den protokollen? En protokoll med én funksjon er en veldig
 objekt-orientert måte å henge en funksjon fast i "en ting" på. I et funksjonelt
 språk kan vi like gjerne bare sende med funksjonen.
 
-## Iterasjon #4: Dumdoms globale event-handler
+## Iterasjon #4: Dumdoms topp-nivå event-handler
 
-Når vi endelig var ved veis ende sto vi igjen med dette:
+Da vi endelig var ved veis ende sto vi igjen med dette:
 
 ```clj
 (d/render
@@ -144,17 +146,17 @@ Når vi endelig var ved veis ende sto vi igjen med dette:
 ```
 
 Den opprinnelige idéen om å gi Dumdom en meldingsbuss er skrinlagt til fordel
-for at Dumdom kan ha én global event-handler, som kalles dersom du angir noe
-annet enn en funksjon på event-attributter så som `:onClick`. Men drømmen om en
-meldingsbuss integrert i renderingbiblioteket er ikke lagt død: Dumdom gir oss
-nå akkurat nok verktøy til at vi kan koble på meldingsbussen vi allerede har i
+for at Dumdom kan ha én event-handler ved `render`, som kalles dersom du angir
+noe annet enn en funksjon på event-attributter så som `:onClick`. Men drømmen om
+en meldingsbuss integrert i renderingbiblioteket er ikke død: Dumdom gir oss nå
+akkurat nok verktøy til at vi kan koble på meldingsbussen vi allerede har i
 appen vår.
 
 Legg merke til at Dumdom ikke lengre trenger å vite noe som helst om
-event-dataene dine. Den sender dem bare videre til den globale handleren, så
-blir det opp til deg å bruke dem til noe fornuftig. Vil du ha dataene
-videreformidlet til en meldinsbuss? Kjør på! Vil du interpolere verdier fra
-eventet? Fint, lag en interpoleringsfunksjon og plugg den på.
+event-dataene dine. Den sender dem bare videre til handleren, så blir det opp
+til deg å bruke dem til noe fornuftig. Vil du ha dataene videreformidlet til en
+meldingsbuss? Kjør på! Vil du interpolere verdier fra eventet? Fint, lag en
+interpoleringsfunksjon og plugg den på.
 
 ## Få til mer ved å gjøre mindre
 
