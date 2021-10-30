@@ -176,8 +176,8 @@ det om å ikke gjøre mer enn akkurat nok. Hvis jeg fortsatt ønsker å levere e
 "batteries included" løsning for meldinger til Dumdom så kan jeg lage det i et
 eget bibliotek. Ved å komponere disse fra utsiden sikrer vi Dumdom en stabil
 fremtid. Alle antagelsene, koden og dokumentasjonen som ble forkastet på veien
-er kode som ikke kan akkumulere nye bugs og sikkerhetshull, ikke skaper
-forvirring for brukerne, og som ikke åpner døra for å akkumulere enda flere
+er kode som ikke vil samle nye bugs og sikkerhetshull, ikke skaper forvirring
+for brukerne, og som ikke åpner døra for å akkumulere enda flere
 nesten-relaterte features.
 
 På denne måten kan Dumdom bli "ferdig". Kode som er ferdig er kode du ikke
